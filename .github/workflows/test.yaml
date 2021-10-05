@@ -10,4 +10,4 @@ jobs:
       - name: Setup repository name
         run: echo "MWT_REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
 
-      - run: echo "${{ env.REPOSITORY_NAME }}"
+      - run: echo "${{ env.MWT_REPOSITORY_NAME }}"
