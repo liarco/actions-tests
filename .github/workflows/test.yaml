@@ -1,0 +1,13 @@
+name: Testing action
+
+on:
+  push:
+
+jobs:
+  docker-build-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repository name
+        run: echo ::set-env name=MWT_REPOSITORY_NAME::${GITHUB_REPOSITORY#*/}
+
+      - run: echo "${{ env.REPOSITORY_NAME }}"
